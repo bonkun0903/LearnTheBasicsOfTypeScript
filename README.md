@@ -1,0 +1,3 @@
+# LearnTheBasicsOfTypeScript
+
+トラハックさんの動画を参考にTypeScriptの基礎を学習しました。
