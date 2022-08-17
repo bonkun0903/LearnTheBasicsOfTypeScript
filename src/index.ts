@@ -42,11 +42,10 @@
 
 // console.log(jump)
 
-
 // 非同期処理
 // import callbackSample from "./asynchronous/callback";
 // import promiseSample from "./asynchronous/promise"
-import asyncAwaitSample from "./asynchronous/asymcAwait"
+import asyncAwaitSample from './asynchronous/asymcAwait'
 
 // callbackSample()
 // promiseSample()

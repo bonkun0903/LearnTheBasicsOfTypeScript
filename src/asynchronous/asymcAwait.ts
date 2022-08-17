@@ -1,6 +1,6 @@
 export default async function asyncAwaitSample() {
-  const url = "https://api.github.com/users/bonkun0903"
-  
+  const url = 'https://api.github.com/users/bonkun0903'
+
   type Profile = {
     login: string
     id: number
@@ -12,33 +12,34 @@ export default async function asyncAwaitSample() {
     const response = await fetch(url)
       .then((res) => res)
       .catch((error) => {
-      console.error(error)
-      return null
+        console.error(error)
+        return null
       })
 
-      if (!response) {
+    if (!response) {
       return null
-      }
+    }
 
-      const json = await response.json()
-        .then((json: Profile) => {
-          console.log("Asynchronous async/await Sample 1:", json)
-          return json
-        })
-        .catch((error) => {
-          console.error(error)
-          return null
-        })
-
-        if (!json) {
-          return null
-        }
-
+    const json = await response
+      .json()
+      .then((json: Profile) => {
+        console.log('Asynchronous async/await Sample 1:', json)
         return json
+      })
+      .catch((error) => {
+        console.error(error)
+        return null
+      })
+
+    if (!json) {
+      return null
+    }
+
+    return json
   }
 
   const profile = await fetchProfile()
   if (profile) {
-    console.log("Asynchronous async/await Sample 2:", profile)
+    console.log('Asynchronous async/await Sample 2:', profile)
   }
 }
